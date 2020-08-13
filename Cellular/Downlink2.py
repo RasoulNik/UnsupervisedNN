@@ -64,7 +64,7 @@ def train(obj,Dataobj,epochs,mode):
     best_W = None
     LR=np.logspace(-3,-4.5, num=epochs)
     G_batch,_=Dataobj(5*batch_size)
-    SNR=np.power(10,P_over_noise/10)*G_batch
+    SNR = np.power(10,P_over_noise/10)*G_batch
     #--------------Uncomment one of the following options
     Xin=np.reshape(np.log(SNR),[SNR.shape[0],-1])
     # Xin=tf.linalg.diag_part(SNR)

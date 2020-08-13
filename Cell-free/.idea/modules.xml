@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Cell-free.iml" filepath="$PROJECT_DIR$/.idea/Cell-free.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../UNN/Uplink/Python-noise/.idea/Python-noise.iml" filepath="$PROJECT_DIR$/../../../UNN/Uplink/Python-noise/.idea/Python-noise.iml" />
+    </modules>
+  </component>
+</project>

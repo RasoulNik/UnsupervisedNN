@@ -34,7 +34,8 @@ class xNN(Layer):
         y=self.dense1(y)
         # y_res
 #         y = tf.concat([y,xin],axis=1)
-        y=self.dense2(y)
+        y = self.dense2(y)
+
         return y
 #     def call(self,xin):
 #         with tf.GradientTape() as tape:
