@@ -18,11 +18,8 @@ class Loss(Layer):
     def build(self,input_shape):
         pass
     def call(self,SNR,p):
-        # p=-tf.nn.relu(p)
 
-        # p=p+1e-5
-        p = tf.math.exp(p)
-        num=tf.zeros([p.shape[0],1], dtype='float32') 
+        num=tf.zeros([p.shape[0],1], dtype='float32')
         denom=tf.zeros(num.shape, dtype='float32') 
         SINR=tf.zeros([SNR.shape[0],self.Nuser], dtype='float32')
         # ta = tf.TensorArray(tf.float32, size=self.Nuser)

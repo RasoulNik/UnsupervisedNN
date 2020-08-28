@@ -44,7 +44,7 @@ class Plot():
     def sinr_av(self,SNR,p,Nap,Nuser,mode='Clip'):
         # p=tf.cast(p,'float64')
         # SNR=tf.constant(SNR.astype('float64'),dtype='float64')
-        p=tf.exp(p)
+        # p=tf.exp(p)
         if mode=='Clip':
             p=tf.clip_by_value(p,0,1)
     #    p=p+1e-5;
@@ -70,7 +70,7 @@ class Plot():
     def SIR(self,SNR,p,Nuser):
         p=tf.cast(p,'float32')
         # SNR=tf.constant(SNR.astype('float64'),dtype='float64')
-        p=tf.exp(p)
+        # p=tf.exp(p)
     #    p=p+1e-5;
         num=tf.zeros([p.shape[0],1], dtype='float32') 
         denom=tf.zeros(num.shape, dtype='float32') 

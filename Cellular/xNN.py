@@ -30,11 +30,11 @@ class xNN(Layer):
 #         return y 
     # @tf.function
     def call(self,xin):
-        y=self.dense0(xin)
-        y=self.dense1(y)
-        # y_res
-#         y = tf.concat([y,xin],axis=1)
-        y=self.dense2(y)
+        y = self.dense0(xin)
+        y = self.dense1(y)
+        y = self.dense2(y)
+        y = tf.exp(y)
+        # p=p+1e-5
         return y
 #     def call(self,xin):
 #         with tf.GradientTape() as tape:

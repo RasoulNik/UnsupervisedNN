@@ -41,10 +41,12 @@ class Plot():
         # get the cumulative probabilities between 0 and 1
         cumprob = np.cumsum(counts).astype(np.double) / sample.size
         return quantiles, cumprob
-    def sinr_av(self,SNR,p,Nap,Nuser):
+    def sinr_av(self,SNR,p,Nap,Nuser,mode='Clip'):
         # p=tf.cast(p,'float32')
         # SNR=tf.constant(SNR.astype('float32'),dtype='float32')
-        p=tf.math.exp(p)
+        # p=tf.math.exp(p)
+        if mode=='Clip':
+            p=tf.clip_by_value(p,0,1)
     #    p=p+1e-5;
         Hloop=100
         num=tf.zeros([p.shape[0],1], dtype='float32') 
@@ -68,7 +70,7 @@ class Plot():
     def SINR(self,SNR,p,Nuser):
         # p=tf.cast(p,'float32')
         # SNR=tf.constant(SNR.astype('float64'),dtype='float64')
-        p=tf.math.exp(p)
+        # p=tf.math.exp(p)
     #    p=p+1e-5;
         num=tf.zeros([p.shape[0],1], dtype='float32') 
         denom=tf.zeros(num.shape, dtype='float32') 

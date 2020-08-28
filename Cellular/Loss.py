@@ -18,11 +18,7 @@ class Loss(Layer):
     def build(self,input_shape):
         pass            
     def call(self,SNR,p):
-        # p=tf.cast(p,'float32')
-        # SNR=tf.cast(SNR,'float32')
-        # p=tf.nn.relu(p)
-        p = tf.exp(p)
-        # p=p+1e-5
+
         # with tf.GradientTape() as tape:
         #     tape.watch(p)
         num=tf.zeros([p.shape[0],1], dtype='float32') 
