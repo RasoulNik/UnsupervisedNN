@@ -12,16 +12,16 @@ is very satisfactory and, in terms of computational cost, its
 scalability with the problem dimensionality is superior to that
 of convex solvers.
 
-# Code structure
+## Code structure
 The codes related to the cellular and cell-free applications are located in respective folders. Also, inside each folder, the uplink and downlink scenarios are seprated. For example, the uplink of the cell-free is located in the file ../Cell-free/uplink.py.
 
 Inside each script, you can specify train and load mode. If you set load = 1, it will load from the pre-trained model, while, load = 0 will train a new model. Trained models are going to be saved in the models folder with time tags.
 
-## GPU support
+### GPU support
 if you have GPU  and proper version of the of TensorFlow  (for example if you are using a TF container with the GPU tag) in your system, you can set GPU_mode = 1 and the code will run much faster.
 
 
-# Citing
+## Citing
 To site this repository please using the following papers:
 
 R. Nikbakht, A. Jonsson and A. Lozano, "Unsupervised Learning for Parametric Optimization," in IEEE Communications Letters, doi: 10.1109/LCOMM.2020.3027981.
