@@ -19,7 +19,11 @@ Inside each script, you can specify train and load mode. If you set load = 1, it
 
 ### GPU support
 if you have GPU  and proper version of the of TensorFlow  (for example if you are using a TF container with the GPU tag) in your system, you can set GPU_mode = 1 and the code will run much faster.
-
+### How can I use this library for my own application?
+The code is modular. You need to define three classes.
+1. Loss class: It specifies how good is the output of the NN for the given input.
+2. NN class: The design of this class is very straight forward. Based on the dimension of the input and output you design a fully connect NN. The dimension of the input layer should be bigger than the dimension of the input dimension and the output layer dimension is determined by the output size. The size of the hidden layer should be between these two limits.
+3. UNN class: This class puts the previous classes together and outputs the cost or loss for the given parameters (input).
 
 ## Citing
 To site this repository please using the following papers:
