@@ -5,12 +5,10 @@ Created on Sun Mar 29 19:56:46 2020
 @author: nikbakht
 """
 import numpy as np
-import scipy.io as sio
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from Data import Data
-from UNN import UNN
-import pickle
+
+
 class Plot():
     def __init__(self,**kwargs):
         super(Plot, self).__init__(**kwargs)
