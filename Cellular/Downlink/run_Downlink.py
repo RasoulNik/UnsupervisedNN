@@ -21,7 +21,7 @@ if GPU_mode:
 import os, sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import numpy as np
-import os
+import osl
 import time 
 # import matplotlib.pyplot as plt
 import scipy.io as sio

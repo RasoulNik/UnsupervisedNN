@@ -1,1 +1,4 @@
 Cellular/Downlink/logs
+Cellular/Uplink/logs
+venv/
+.idea/
